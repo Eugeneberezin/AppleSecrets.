@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SiT-In-ypX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleSecrets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKQ-Rj-8so">
+                                <rect key="frame" x="163" y="451.5" width="88" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="pfg-ut-O8C"/>
+                                </constraints>
+                                <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTW-hr-yIl"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="igT-A4-ZmO">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="igT-A4-ZmO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="84R-BX-wk0"/>
+                            <constraint firstItem="xKQ-Rj-8so" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AWx-Gj-E14"/>
+                            <constraint firstItem="igT-A4-ZmO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FWC-Vf-Zmb"/>
+                            <constraint firstItem="xKQ-Rj-8so" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="idM-NF-yqR"/>
+                            <constraint firstItem="igT-A4-ZmO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tLB-5Y-MjF"/>
+                            <constraint firstItem="igT-A4-ZmO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w7G-ga-trD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jRx-m1-xUJ"/>
+                    <connections>
+                        <outlet property="secret" destination="igT-A4-ZmO" id="hBo-gj-FSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l9o-rn-Zm3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SiT-In-ypX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e7A-1B-VLv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zHb-Iz-TDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USB-uj-hYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
